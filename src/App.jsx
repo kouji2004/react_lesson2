@@ -74,7 +74,7 @@ const square = ()=>{
       <div>カウント2:{count02}</div>
       <div>結果:{square()}</div>
       <button onClick={()=>setCount01(count01+1)}>+</button>
-      <button onClick={()=>setCount01(count02-1)}>-</button>
+      <button onClick={()=>setCount01(count02+1)}>-</button>
     </div>
 
     

@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext} from 'react';
 import './App.css'
+import ShinCodeContext from './main';
 
 function App() {
  const [count,setCount] = useState(0);
-  
+  const shinCodeInfo = useContext(ShinCodeContext);
  const handleClick=()=>{
   setCount(count+1);
  }
@@ -21,6 +22,8 @@ function App() {
 
       <hr/>
       <h1>useCotext</h1>
+      <p>{shinCodeInfo.name}</p>
+      <p>{shinCodeInfo.age}</p>
     </div>
   )
 }

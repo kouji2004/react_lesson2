@@ -1,10 +1,13 @@
-import { useEffect, useState, useContext} from 'react';
+import { useEffect, useState, useContext, useRef} from 'react';
 import './App.css'
 import ShinCodeContext from './main';
 
 function App() {
  const [count,setCount] = useState(0);
   const shinCodeInfo = useContext(ShinCodeContext);
+  const ref =useRef();
+
+
  const handleClick=()=>{
   setCount(count+1);
  }
@@ -13,6 +16,9 @@ function App() {
  console.log("hello")
  },[count]);
 
+ const handleRef = () =>{
+
+ };
 
   return (
     <div className="App">
@@ -24,7 +30,15 @@ function App() {
       <h1>useCotext</h1>
       <p>{shinCodeInfo.name}</p>
       <p>{shinCodeInfo.age}</p>
+
+      <hr/>
+      <h1>useRef</h1>
+      <input type="text" ref={ref}/>
+      <button onClick={handleRef}>UseRef</button>
+
     </div>
+
+    
   )
 }
 

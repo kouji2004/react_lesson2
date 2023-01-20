@@ -18,6 +18,9 @@ function App() {
       <h1>UseState, useEffect</h1>
       <button onClick={handleClick}>+</button>
       <p>{count}</p>
+
+      <hr/>
+      <h1>useCotext</h1>
     </div>
   )
 }

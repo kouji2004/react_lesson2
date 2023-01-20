@@ -10,7 +10,9 @@ function App() {
 
  useEffect(()=>{
  console.log("hello")
- },[]);
+ },[count]);
+
+
   return (
     <div className="App">
       <h1>UseState, useEffect</h1>
